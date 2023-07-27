@@ -1,7 +1,5 @@
 # Hello, World! 👋
 
-![Profile Banner](https://example.com/your-banner-image.png) <!-- Replace with a link to your profile banner image -->
-
 Welcome to my GitHub profile! I'm [Paulo Dalmas](https://github.com/dalmasjunior), a passionate developer from [Brazil](https://maps.google.com/?q=Brazil) who loves to explore and create amazing software.
 
 
