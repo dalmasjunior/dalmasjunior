@@ -4,11 +4,6 @@
 
 Welcome to my GitHub profile! I'm [Paulo Dalmas](https://github.com/dalmasjunior), a passionate developer from [Brazil](https://maps.google.com/?q=Brazil) who loves to explore and create amazing software.
 
-## 🔭 Current Projects
-
-- [Project 1](https://github.com/yourusername/project1): A brief description of project 1.
-- [Project 2](https://github.com/yourusername/project2): A brief description of project 2.
-- [Project 3](https://github.com/yourusername/project3): A brief description of project 3.
 
 ## 🌱 What I'm Currently Learning
 
@@ -57,5 +52,5 @@ This README is licensed under [CC BY-SA 4.0](https://creativecommons.org/license
 ## Connect with me
 
 <!-- <a href="https://blog.kostic.dev"><img src="https://img.shields.io/badge/blog.kostic.dev-3423A6?style=flat&logo=Google-Chrome&logoColor=white"/></a> -->
-<a href="https://www.linkedin.com/in/dalmasjunior/"><img src="https://img.shields.io/badge/-dalmasjunior-0077B5?style=flat&logo=Linkedin&logoColor=black"/></a>
+<a href="https://www.linkedin.com/in/paulodalmas/"><img src="https://img.shields.io/badge/-paulodalmas-0077B5?style=flat&logo=Linkedin&logoColor=black"/></a>
 </p>
