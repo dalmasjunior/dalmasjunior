@@ -20,7 +20,7 @@ I'm open to collaborating on exciting projects. If you think my skills align wit
 You can reach me through the following channels:
 
 - Email: dalmasjunior@gmail.com
-- LinkedIn: [Paulo Dalmas](https://www.linkedin.com/in/paulodalmas/)Pau
+- LinkedIn: [Paulo Dalmas](https://www.linkedin.com/in/paulodalmas/)
 
 ## 💬 Ask Me About
 
