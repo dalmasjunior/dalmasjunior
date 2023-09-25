@@ -9,7 +9,7 @@ I'm always eager to learn new technologies and expand my knowledge. Some of the 
 
 - Rust
 - Solana
-- Machine Learning
+- Blockchain
 
 ## 👯 Looking to Collaborate?
 
@@ -20,7 +20,7 @@ I'm open to collaborating on exciting projects. If you think my skills align wit
 You can reach me through the following channels:
 
 - Email: dalmasjunior@gmail.com
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/paulodalmas/)
+- LinkedIn: [Paulo Dalmas](https://www.linkedin.com/in/paulodalmas/)Pau
 
 ## 💬 Ask Me About
 
@@ -29,6 +29,7 @@ If you have any questions or need help with:
 - Golang
 - Typescript
 - Javascript
+- Rust
 
 Feel free to ask! I'll be glad to assist you.
 
