@@ -1,8 +1,8 @@
 name: Update badges
 
 on:
-  label:
-    types: [created, deleted]
+  milestone:
+    types: [opened, deleted]
 jobs:
   update-readme:
     name: Update Readme with badges
