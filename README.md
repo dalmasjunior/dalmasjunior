@@ -7,9 +7,13 @@ Welcome to my GitHub profile! I'm [Paulo Dalmas](https://github.com/dalmasjunior
 
 I'm always eager to learn new technologies and expand my knowledge. Some of the things I'm currently learning include:
 
+- Cibersecurity
 - Rust
 - Solana
 - Blockchain
+
+<!--START_SECTION:badges-->
+<!--END_SECTION:badges-->
 
 ## 👯 Looking to Collaborate?
 
