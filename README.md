@@ -13,6 +13,7 @@ I'm always eager to learn new technologies and expand my knowledge. Some of the 
 - Blockchain
 
 <!--START_SECTION:badges-->
+[![Introduction to Cybersecurity](https://images.credly.com/size/110x110/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png)](http://www.credly.com/badges/6f13fc2b-b375-4c3f-861b-ffc72cb51d66 "Introduction to Cybersecurity")
 <!--END_SECTION:badges-->
 
 ## 👯 Looking to Collaborate?
