@@ -14,9 +14,12 @@ I'm always eager to learn new technologies and expand my knowledge. Some of the 
 
 <!--START_SECTION:badges-->
 [![Introduction to Cybersecurity](https://images.credly.com/size/110x110/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png)](http://www.credly.com/badges/6f13fc2b-b375-4c3f-861b-ffc72cb51d66 "Introduction to Cybersecurity")
+![isc2-candidate (1)](https://github.com/dalmasjunior/dalmasjunior/assets/10154412/c3d25709-e96d-44b3-91c1-ec4c3f7fa68f)
+
 <!--END_SECTION:badges-->
 
-## 👯 Looking to Collaborate?
+
+## Looking to Collaborate?
 
 I'm open to collaborating on exciting projects. If you think my skills align with your ideas, feel free to reach out to me!
 
