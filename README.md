@@ -35,3 +35,24 @@ with strict performance and reliability requirements.
 
 - LinkedIn: https://www.linkedin.com/in/paulodalmas  
 - Email: dalmasjunior@gmail.com
+
+---
+
+## 🚀 Portfolio Website
+
+This repository contains my portfolio website built with Next.js, featuring:
+
+- Modern glassmorphism design with dark theme
+- Internationalization support (English/Portuguese)
+- Responsive layout optimized for all devices
+- Smooth scroll navigation
+- Resume/CV download functionality
+
+### Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
