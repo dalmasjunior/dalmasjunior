@@ -5,7 +5,6 @@ high-availability, low-latency distributed systems in production.
 
 Strong background in Go, TypeScript, Rust, and AWS, with a focus on
 event-driven architectures, real-time data processing, and cloud-native platforms.
-<<<<<<< HEAD
 
 Former CTO. Currently working on mission-critical backend systems
 with strict performance and reliability requirements.
@@ -57,35 +56,3 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
-=======
-
-Former CTO. Currently working on mission-critical backend systems
-with strict performance and reliability requirements.
-
----
-
-## 🛠️ Tech Stack
-
-**Languages:** Go, TypeScript, Rust, Python  
-**Backend & Frameworks:** Node.js, NestJS, Serverless architectures  
-**Cloud & DevOps:** AWS, Docker, Kubernetes, Cloudflare  
-**Data & Caching:** PostgreSQL, MongoDB, DynamoDB, Redis  
-**Observability:** Prometheus, Grafana  
-**CI/CD & Tooling:** GitHub Actions, Infrastructure as Code
-
----
-
-## 🔭 Current Work
-
-- High-throughput backend services for real-time applications
-- Distributed data ingestion and processing pipelines
-- Low-latency APIs with caching and performance optimization
-- Cloud-native systems focused on reliability and scalability
-
----
-
-## 📫 Contact
-
-- LinkedIn: https://www.linkedin.com/in/paulodalmas  
-- Email: dalmasjunior@gmail.com
->>>>>>> cd7dbab (Add portfolio website with i18n support (EN/PT-BR))
