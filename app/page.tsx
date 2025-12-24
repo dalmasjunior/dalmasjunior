@@ -182,6 +182,8 @@ const translations = {
 
 export default function Home() {
   const [lang, setLang] = useState<"en" | "pt">("en");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const t = translations[lang];
 
   useEffect(() => {
@@ -192,9 +194,29 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    // Fechar dropdowns ao clicar fora
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('.language-selector') && !target.closest('.mobile-menu')) {
+        setLangDropdownOpen(false);
+      }
+    };
+
+    if (langDropdownOpen) {
+      document.addEventListener('click', handleClickOutside);
+      return () => document.removeEventListener('click', handleClickOutside);
+    }
+  }, [langDropdownOpen]);
+
   const handleLangChange = (newLang: "en" | "pt") => {
     setLang(newLang);
     localStorage.setItem("lang", newLang);
+    setLangDropdownOpen(false);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -204,36 +226,34 @@ export default function Home() {
       
       {/* Navigation */}
       <nav className="relative z-50 nav-transparent">
-        <div className="max-w-[95%] mx-auto px-6 py-6 flex justify-between items-center">
-          <div className="flex items-center gap-4">
+        <div className="max-w-[95%] mx-auto px-4 sm:px-6 py-4 sm:py-6 flex justify-between items-center">
+          <div className="flex items-center gap-2 sm:gap-4">
             <Image
               src="/logo.png"
               alt="Logo"
-              width={60}
-              height={60}
-              className="object-contain"
+              width={40}
+              height={40}
+              className="object-contain sm:w-[60px] sm:h-[60px]"
             />
-            <div className="text-lg font-bold text-white">
-              PAULO DALMAS
+            <div className="text-sm sm:text-lg font-bold text-white whitespace-nowrap">
+              <span className="hidden sm:inline">PAULO DALMAS</span>
+              <span className="sm:hidden">P. DALMAS</span>
             </div>
           </div>
-          <div className="flex items-center gap-6">
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-6">
             <div className="flex gap-6 text-sm text-white">
-              <a href="#home" className="hover:text-gray-300 transition-colors">{t.nav.home}</a>
-              <a href="#about" className="hover:text-gray-300 transition-colors">{t.nav.about}</a>
-              <a href="#experience" className="hover:text-gray-300 transition-colors">{t.nav.experience}</a>
-              <a href="#contact" className="hover:text-gray-300 transition-colors">{t.nav.contact}</a>
+              <a href="#home" className="hover:text-gray-300 transition-colors" onClick={closeMobileMenu}>{t.nav.home}</a>
+              <a href="#about" className="hover:text-gray-300 transition-colors" onClick={closeMobileMenu}>{t.nav.about}</a>
+              <a href="#experience" className="hover:text-gray-300 transition-colors" onClick={closeMobileMenu}>{t.nav.experience}</a>
+              <a href="#contact" className="hover:text-gray-300 transition-colors" onClick={closeMobileMenu}>{t.nav.contact}</a>
             </div>
-            {/* Language Selector */}
-            <div className="relative group">
+            {/* Language Selector Desktop */}
+            <div className="relative group language-selector">
               <button 
                 className="flex items-center gap-2 text-sm text-white hover:text-gray-300 transition-colors"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  const dropdown = e.currentTarget.nextElementSibling as HTMLElement;
-                  dropdown.classList.toggle('opacity-0');
-                  dropdown.classList.toggle('invisible');
-                }}
+                onClick={() => setLangDropdownOpen(!langDropdownOpen)}
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
@@ -241,29 +261,17 @@ export default function Home() {
                 <span className="uppercase">{lang}</span>
               </button>
               <div 
-                className="absolute right-0 top-full mt-2 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+                className={`absolute right-0 top-full mt-2 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden transition-all duration-200 z-50 language-selector ${langDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
-                  onClick={() => {
-                    handleLangChange("en");
-                    const dropdown = document.querySelector('.language-dropdown') as HTMLElement;
-                    if (dropdown) {
-                      dropdown.classList.add('opacity-0', 'invisible');
-                    }
-                  }}
+                  onClick={() => handleLangChange("en")}
                   className={`block w-full px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors text-left ${lang === "en" ? "bg-white/10" : ""}`}
                 >
                   EN
                 </button>
                 <button
-                  onClick={() => {
-                    handleLangChange("pt");
-                    const dropdown = document.querySelector('.language-dropdown') as HTMLElement;
-                    if (dropdown) {
-                      dropdown.classList.add('opacity-0', 'invisible');
-                    }
-                  }}
+                  onClick={() => handleLangChange("pt")}
                   className={`block w-full px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors text-left ${lang === "pt" ? "bg-white/10" : ""}`}
                 >
                   PT
@@ -271,7 +279,95 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Mobile Navigation */}
+          <div className="md:hidden flex items-center gap-3">
+            {/* Language Selector Mobile */}
+            <div className="relative language-selector">
+              <button 
+                className="flex items-center gap-1 text-sm text-white hover:text-gray-300 transition-colors"
+                onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                </svg>
+                <span className="uppercase text-xs">{lang}</span>
+              </button>
+              {langDropdownOpen && (
+                <div 
+                  className="absolute right-0 top-full mt-2 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden z-50 language-selector"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <button
+                    onClick={() => handleLangChange("en")}
+                    className={`block w-full px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors text-left ${lang === "en" ? "bg-white/10" : ""}`}
+                  >
+                    EN
+                  </button>
+                  <button
+                    onClick={() => handleLangChange("pt")}
+                    className={`block w-full px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors text-left ${lang === "pt" ? "bg-white/10" : ""}`}
+                  >
+                    PT
+                  </button>
+                </div>
+              )}
+            </div>
+            
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="text-white hover:text-gray-300 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu Dropdown */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-black/95 backdrop-blur-sm border-t border-white/20 mobile-menu">
+            <div className="max-w-[95%] mx-auto px-4 py-4 flex flex-col gap-4">
+              <a 
+                href="#home" 
+                className="text-white hover:text-gray-300 transition-colors py-2"
+                onClick={closeMobileMenu}
+              >
+                {t.nav.home}
+              </a>
+              <a 
+                href="#about" 
+                className="text-white hover:text-gray-300 transition-colors py-2"
+                onClick={closeMobileMenu}
+              >
+                {t.nav.about}
+              </a>
+              <a 
+                href="#experience" 
+                className="text-white hover:text-gray-300 transition-colors py-2"
+                onClick={closeMobileMenu}
+              >
+                {t.nav.experience}
+              </a>
+              <a 
+                href="#contact" 
+                className="text-white hover:text-gray-300 transition-colors py-2"
+                onClick={closeMobileMenu}
+              >
+                {t.nav.contact}
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
