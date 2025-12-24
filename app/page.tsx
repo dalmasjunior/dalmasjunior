@@ -227,17 +227,9 @@ export default function Home() {
       {/* Navigation */}
       <nav className="relative z-50 nav-transparent">
         <div className="max-w-[95%] mx-auto px-4 sm:px-6 py-4 sm:py-6 flex justify-between items-center">
-          <div className="flex items-center gap-2 sm:gap-4">
-            <Image
-              src="/logo.png"
-              alt="Logo"
-              width={40}
-              height={40}
-              className="object-contain sm:w-[60px] sm:h-[60px]"
-            />
-            <div className="text-sm sm:text-lg font-bold text-white whitespace-nowrap">
-              <span className="hidden sm:inline">PAULO DALMAS</span>
-              <span className="sm:hidden">P. DALMAS</span>
+          <div className="flex items-center">
+            <div className="text-base sm:text-lg md:text-xl font-bold text-white whitespace-nowrap">
+              PAULO DALMAS
             </div>
           </div>
           
