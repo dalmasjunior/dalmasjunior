@@ -1,34 +1,37 @@
-# 👋 Hello, I'm Paulo Dalmas
+# 👋 Hi, I'm Paulo Dalmas
 
-🚀 Senior Backend Engineer with 15+ years of experience in distributed systems, backend architecture, and cloud infrastructure.  
-🔧 Expert in Golang, TypeScript, AWS, and microservices.  
-🌐 Former CTO. Currently working on high-performance systems for the gaming industry.  
-🧠 Pursuing a postgraduate degree in Quantum Computing at UniSul.
+Senior Backend Engineer with 15+ years of experience designing and operating
+high-availability, low-latency distributed systems in production.
+
+Strong background in Go, TypeScript, Rust, and AWS, with a focus on
+event-driven architectures, real-time data processing, and cloud-native platforms.
+
+Former CTO. Currently working on mission-critical backend systems
+with strict performance and reliability requirements.
 
 ---
 
 ## 🛠️ Tech Stack
-**Languages:** Go, TypeScript, Python, Rust  
-**Frameworks:** NestJS, Next.js, React, Serverless  
-**Cloud & DevOps:** AWS, Docker, Kubernetes, Redis  
-**Databases:** PostgreSQL, MongoDB, DynamoDB  
-**Tools:** Prometheus, Grafana, GitHub Actions, Stripe API, Cloudflare  
+
+**Languages:** Go, TypeScript, Rust, Python  
+**Backend & Frameworks:** Node.js, NestJS, Serverless architectures  
+**Cloud & DevOps:** AWS, Docker, Kubernetes, Cloudflare  
+**Data & Caching:** PostgreSQL, MongoDB, DynamoDB, Redis  
+**Observability:** Prometheus, Grafana  
+**CI/CD & Tooling:** GitHub Actions, Infrastructure as Code
 
 ---
 
-## 🔭 Current Projects
-- ⚙️ Real-time video/image content moderation API (Golang + LLMs + Redis)
-- 🤖 Web scraping pipeline for AI model training (Node.js + AWS Lambda)
-- 📊 Serverless financial reporting with AWS Lambda + S3
+## 🔭 Current Work
+
+- High-throughput backend services for real-time applications
+- Distributed data ingestion and processing pipelines
+- Low-latency APIs with caching and performance optimization
+- Cloud-native systems focused on reliability and scalability
 
 ---
 
-## 📚 Learning
-- Quantum Computing (Qiskit, Quantum Gates, Algorithms)
-- Cryptographic protocols in quantum environments
+## 📫 Contact
 
----
-
-## 📫 Let's Connect
-- [LinkedIn](https://www.linkedin.com/in/paulodalmas)
+- LinkedIn: https://www.linkedin.com/in/paulodalmas  
 - Email: dalmasjunior@gmail.com
